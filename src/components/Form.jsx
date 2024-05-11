@@ -44,12 +44,12 @@ export default function TodoList() {
   };
 
   return (
-    <div>
-      <h1>Todo List</h1>
+    <div className='ml-6'>
+      <h1 className='text-white'>Todo List</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Введите задачу"
+          placeholder="Введите"
           value={editIndex !== null ? editValue : inputValue}
           onChange={handleChange}
         />
