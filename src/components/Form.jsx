@@ -16,7 +16,7 @@ export default function TodoList() {
     if (!inputValue.trim()) return;
 
     if (editIndex !== null) {
-      // Если индекс для редактирования задачи установлен
+     
       const updatedTodos = [...todos];
       updatedTodos[editIndex] = editValue;
       setTodos(updatedTodos);
