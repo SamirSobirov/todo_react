@@ -47,14 +47,14 @@ export default function TodoList() {
     <div className='mt-12 items-center text-center'>
       <h1 className=' text-5xl font-extrabold' >Todo List</h1>
       <form onSubmit={handleSubmit}>
-        <input className='mt-[30px] h-12 p-[10px] w-[400px]'
+        <input className='mt-[30px] h-12 p-[10px] w-[400px] rounded-lg'
           type="text"
           placeholder="Введите"
           value={editIndex !== null ? editValue : inputValue}
           onChange={handleChange}
         />
-        <button type="submit" className='ml-4 bg-black text-white h-12 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
-        {editIndex !== null && <button type="button" className='bg-black text-white h-12 pl-4 pr-4 ml-4' onClick={handleCancelEdit}>Отмена</button>}
+        <button type="submit" className='ml-4 bg-black text-white h-12 pl-4 pr-4 rounded-lg'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
+        {editIndex !== null && <button type="button" className='rounded-lg bg-black text-white h-12 pl-4 pr-4 ml-4' onClick={handleCancelEdit}>Отмена</button>}
       </form>
       <ul className='mt-[50px] flex h-6 w-[100%] ml-4 '>
         {todos.map((todo, index) => (
