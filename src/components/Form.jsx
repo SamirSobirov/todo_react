@@ -58,10 +58,10 @@ export default function TodoList() {
       </form>
       <ul className=''>
         {todos.map((todo, index) => (
-          <li className='text-center items-center'  key={index}>
+          <li className='text-center items-center mt-[20px]'  key={index}>
             {editIndex === index ? (
               <>
-                <input className='mt-[30px] h-8 p-[10px]'
+                <input className=' h-8 p-[10px]'
                   type="text"
                   value={editValue}
                   onChange={(event) => setEditValue(event.target.value)}
