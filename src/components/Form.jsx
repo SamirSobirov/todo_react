@@ -16,7 +16,6 @@ export default function TodoList() {
   }, []);
 
   const saveTodosToDB = (updatedTodos) => {
-    
     axios.patch('/db.json', { tasks: updatedTodos.map((name, id) => ({ id: id.toString(), name })) })
       .then(response => console.log('Todos saved:', response))
       .catch(error => console.error('Error saving todos:', error));
@@ -30,12 +29,7 @@ export default function TodoList() {
     event.preventDefault();
     if (!inputValue.trim()) return;
 
-    const updatedTodos = [...todos];
-    if (editIndex !== null) {
-      updatedTodos[editIndex] = editValue;
-    } else {
-      updatedTodos.push(inputValue);
-    }
+    const updatedTodos = [...todos, inputValue];
     setTodos(updatedTodos);
     saveTodosToDB(updatedTodos);
     setInputValue('');
@@ -46,7 +40,7 @@ export default function TodoList() {
   const handleDelete = (index) => {
     const updatedTodos = todos.filter((_, i) => i !== index);
     setTodos(updatedTodos);
-    saveTodosToDB(updatedTodos); 
+    saveTodosToDB(updatedTodos);
   };
 
   const handleEdit = (index) => {
