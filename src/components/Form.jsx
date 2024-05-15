@@ -44,36 +44,36 @@ export default function TodoList() {
   };
 
   return (
-    <div className='ml-6 items-center'>
-      <h1 className='text-white' >Todo List</h1>
+    <div className='mt-12 items-center text-center'>
+      <h1 className=' text-4xl' >Todo List</h1>
       <form onSubmit={handleSubmit}>
-        <input
+        <input className='mt-[30px] h-8 p-[10px]'
           type="text"
           placeholder="Введите"
           value={editIndex !== null ? editValue : inputValue}
           onChange={handleChange}
         />
-        <button type="submit">{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
+        <button type="submit" className='ml-4 bg-black text-white h-8 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
         {editIndex !== null && <button type="button" onClick={handleCancelEdit}>Отмена</button>}
       </form>
-      <ul>
+      <ul className=''>
         {todos.map((todo, index) => (
-          <li key={index}>
+          <li className='text-center items-center'  key={index}>
             {editIndex === index ? (
               <>
-                <input
+                <input className='mt-[30px] h-8 p-[10px]'
                   type="text"
                   value={editValue}
                   onChange={(event) => setEditValue(event.target.value)}
                 />
-                <button onClick={handleSubmit}>Сохранить</button>
-                <button onClick={handleCancelEdit}>Отмена</button>
+                <button className='ml-4 bg-black text-white h-8 pl-4 pr-4' onClick={handleSubmit}>Сохранить</button>
+                <button className='ml-4 bg-black text-white h-8 pl-4 pr-4' onClick={handleCancelEdit}>Отмена</button>
               </>
             ) : (
               <>
                 {todo}
-                <button onClick={() => handleEdit(index)}>Изменить</button>
-                <button onClick={() => handleDelete(index)}>Удалить</button>
+                <button className='ml-4 bg-black text-white h-8 pl-4 pr-4' onClick={() => handleEdit(index)}>Изменить</button>
+                <button className='ml-4 bg-black text-white h-8 pl-4 pr-4' onClick={() => handleDelete(index)}>Удалить</button>
               </>
             )}
           </li>
