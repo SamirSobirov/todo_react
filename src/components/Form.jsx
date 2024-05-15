@@ -53,7 +53,7 @@ export default function TodoList() {
           value={editIndex !== null ? editValue : inputValue}
           onChange={handleChange}
         />
-        <button type="submit" className='ml-4 bg-black text-white h-8 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
+        <button type="submit" className='ml-4 bg-black text-white h-12 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
         {editIndex !== null && <button type="button" className='bg-black text-white h-8 pl-4 pr-4 ml-4' onClick={handleCancelEdit}>Отмена</button>}
       </form>
       <ul className='mt-[50px] flex h-4 w-[100%] '>
