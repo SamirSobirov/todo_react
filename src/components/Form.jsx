@@ -54,7 +54,7 @@ export default function TodoList() {
           onChange={handleChange}
         />
         <button type="submit" className='ml-4 bg-black text-white h-8 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
-        {editIndex !== null && <button type="button" onClick={handleCancelEdit}>Отмена</button>}
+        {editIndex !== null && <button type="button" className='bg-black text-white h-8 pl-4 pr-4 ml-4' onClick={handleCancelEdit}>Отмена</button>}
       </form>
       <ul className=''>
         {todos.map((todo, index) => (
