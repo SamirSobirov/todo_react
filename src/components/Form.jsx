@@ -47,7 +47,7 @@ export default function TodoList() {
     <div className='mt-12 items-center text-center'>
       <h1 className=' text-4xl' >Todo List</h1>
       <form onSubmit={handleSubmit}>
-        <input className='mt-[30px] h-8 p-[10px]'
+        <input className='mt-[30px] h-12 p-[10px] w-[400px]'
           type="text"
           placeholder="Введите"
           value={editIndex !== null ? editValue : inputValue}
@@ -56,9 +56,9 @@ export default function TodoList() {
         <button type="submit" className='ml-4 bg-black text-white h-8 pl-4 pr-4'>{editIndex !== null ? 'Сохранить' : 'Добавить'}</button>
         {editIndex !== null && <button type="button" className='bg-black text-white h-8 pl-4 pr-4 ml-4' onClick={handleCancelEdit}>Отмена</button>}
       </form>
-      <ul className=''>
+      <ul className='mt-[50px] flex h-4 w-[100%] '>
         {todos.map((todo, index) => (
-          <li className='text-center items-center mt-[20px]'  key={index}>
+          <li className='text-center items-center mt-[20px] ml-5'  key={index}>
             {editIndex === index ? (
               <>
                 <input className=' h-8 p-[10px]'
