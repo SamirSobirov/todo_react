@@ -60,7 +60,7 @@ export default function TodoList() {
                         <div  key={todo.id} className= {`box ${todo.completed ? 'completed' : ' border-[2px] rounded-xl  border-black'}`}>
                             <div className="left" onClick={() => toggleTodoCompletion(todo)}>
                               <div className='flex justify-between'> 
-                                <h2 className='pl-[20px] text-2xl'>{todo.task}</h2>
+                                <h2 className='pl-[20px] text-2xl text-violet-900'>{todo.task}</h2>
                                 <span className='pr-2 text-sm text-blue-700'>{todo.time}</span>
                                 </div>
 
