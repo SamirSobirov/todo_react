@@ -42,7 +42,7 @@ export default function TodoList() {
 
     return (
         <div className="main-div mx-auto w-1000">
-            <div className="todo-text flex justify-center py-20">
+            <div className="todo-text flex justify-center py-[50px]">
                 <h1 className='text-4xl '>Todo List</h1>
             </div>
             <form name="creater" className="flex justify-center " onSubmit={formSubmitHandler}>
@@ -52,12 +52,12 @@ export default function TodoList() {
                 </label>
             </form>
             <hr className='mt-4 ' />
-            <div className="container mt-30 grid grid-cols-3 gap-20 ">
+            <div className="container px-[20px] pt-8 pr-[50px] grid grid-cols-3 gap-20 ">
                 {todos.length === 0 ?
                     <img src="https://raw.githubusercontent.com/SamirSobirov/Todo_List/main/img/nothing.jpeg" alt="image" className="w-full ml-[100%]" />
                     :
                     todos.map(todo => (
-                        <div key={todo.id} className={`box ${todo.completed ? 'completed' : ''}`}>
+                        <div  key={todo.id} className= {`box ${todo.completed ? 'completed' : ' border-[1px]  border-black'}`}>
                             <div className="left" onClick={() => toggleTodoCompletion(todo)}>
                                 <h2>{todo.task}</h2>
                                 <span>{todo.time}</span>
