@@ -54,7 +54,7 @@ export default function TodoList() {
             <hr className='mt-4 ' />
             <div className="container px-[20px] pt-8 pr-[50px] grid grid-cols-3 gap-20 ">
                 {todos.length === 0 ?
-                    <img src="https://raw.githubusercontent.com/SamirSobirov/Todo_List/main/img/nothing.jpeg" alt="image" className="w-full ml-[100%]" />
+                    <img src="/public/nothing_img.png" alt="image" className="h-[350px] w-full ml-[115%]" />
                     :
                     todos.map(todo => (
                         <div  key={todo.id} className= {`box ${todo.completed ? 'completed' : ' border-[2px] rounded-xl  border-black'}`}>
